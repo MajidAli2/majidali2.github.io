@@ -68,12 +68,11 @@ Add your deployment link here if needed.
 
 ## Deployment
 
-- **Automatic (added):** A GitHub Actions workflow `deploy.yml` is included at `.github/workflows/deploy.yml`. It builds the Vite site and publishes the `dist/` output to the `gh-pages` branch using the repository's `GITHUB_TOKEN`.
-- **GitHub Pages (manual):** To publish directly from this repository using GitHub Pages, go to the repository Settings -> Pages and choose the branch to publish from:
-	- Option A (recommended for user site): set `main` branch and folder `/ (root)` to publish the site directly from the repository root.
-	- Option B: publish from the `gh-pages` branch if you prefer an automated build-and-deploy workflow (the provided action publishes there).
+- **Automatic:** A GitHub Actions workflow is included at `.github/workflows/deploy.yml`. It runs `npm run deploy`, which builds the app and publishes the generated `dist/` folder to the `gh-pages` branch.
+- **GitHub Pages settings:** Set the repository Pages source to `gh-pages` branch and `/ (root)` folder.
+- **Site URL:** Your portfolio should open at `https://majidali2.github.io` once Pages is configured and the latest deploy finishes.
 
-If you want me to switch the workflow to publish directly from `main` (overwrite `main` contents), tell me and I can update the workflow accordingly.
+If you prefer a manual deploy, run `npm run deploy` from the project folder.
 
 ## About Me
 
