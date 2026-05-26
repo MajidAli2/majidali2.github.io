@@ -66,6 +66,15 @@ The form in the portfolio will only send once those values are configured.
 
 Add your deployment link here if needed.
 
+## Deployment
+
+- **Automatic (added):** A GitHub Actions workflow `deploy.yml` is included at `.github/workflows/deploy.yml`. It builds the Vite site and publishes the `dist/` output to the `gh-pages` branch using the repository's `GITHUB_TOKEN`.
+- **GitHub Pages (manual):** To publish directly from this repository using GitHub Pages, go to the repository Settings -> Pages and choose the branch to publish from:
+	- Option A (recommended for user site): set `main` branch and folder `/ (root)` to publish the site directly from the repository root.
+	- Option B: publish from the `gh-pages` branch if you prefer an automated build-and-deploy workflow (the provided action publishes there).
+
+If you want me to switch the workflow to publish directly from `main` (overwrite `main` contents), tell me and I can update the workflow accordingly.
+
 ## About Me
 
 Majid Ali — Computer Science Student | Ethical Hacker | AI Explorer
