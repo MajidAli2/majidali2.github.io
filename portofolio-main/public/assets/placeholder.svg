@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="40" fill="url(#bg)" />
+  <rect x="64" y="64" width="384" height="384" rx="32" fill="none" stroke="#374151" stroke-width="6" />
+  <path d="M128 336l96-112 64 80 64-64 96 96" fill="none" stroke="#4b5563" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="184" cy="188" r="28" fill="#4b5563" />
+  <text x="256" y="420" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="24">Placeholder</text>
+</svg>

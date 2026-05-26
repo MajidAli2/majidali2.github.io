@@ -1,0 +1,16 @@
+{
+  "name": "portofolio-root",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": "npm --prefix portofolio-main install",
+    "dev": "npm --prefix portofolio-main run dev",
+    "build": "npm --prefix portofolio-main run build",
+    "lint": "npm --prefix portofolio-main run lint",
+    "preview": "npm --prefix portofolio-main run preview",
+    "deploy": "npm --prefix portofolio-main run deploy"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1"
+  }
+}
