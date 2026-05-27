@@ -108,7 +108,7 @@ export const listTools = [
   },
 ];
 
-const Proyek1 = asset("nlp.png");
+const Proyek1 = asset("NLP with sentiment analysis.png");
 const Proyek2 = asset("web scraper.png");
 const Proyek3 = asset("airline management.webp");
 
@@ -116,7 +116,7 @@ export const listProyek = [
   {
     id: 1,
     image: Proyek1,
-    title: "NLP Chatbot with Sentiment Analysis",
+    title: "NLP with Sentiment Analysis",
     subtitle: "Chatbot that adapts responses using NLP and sentiment cues.",
     fullDescription:
       "Designed a chatbot that integrates Natural Language Processing with sentiment analysis to interpret user emotions and adapt responses dynamically. The project demonstrates conversational AI with context-aware behavior and emotion-sensitive feedback.",
@@ -128,7 +128,7 @@ export const listProyek = [
   {
     id: 2,
     image: Proyek2,
-    title: "Java Web Scraper",
+    title: "Web Scraper",
     subtitle: "Automation tool that extracts and processes source code from sites.",
     fullDescription:
       "Built a Java-based web scraper capable of extracting and processing source code from websites, showcasing skills in automation, parsing, and data handling.",

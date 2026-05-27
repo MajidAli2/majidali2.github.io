@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import ShinyText from "./components/ShinyText/ShinyText";
-import BlurText from "./components/BlurText/BlurText";
 import ScrambledText from "./components/ScrambledText/ScrambledText";
 import SplitText from "./components/SplitText/SplitText";
 import Lanyard from "./components/Lanyard/Lanyard";
@@ -126,13 +125,28 @@ function App() {
             <h1 className="text-5xl font-bold mb-6">
               <ShinyText text="Hi I'm Majid Ali" disabled={false} speed={3} className='custom-class' />
             </h1>
-            <BlurText
-              text="Computer Science Student | Ethical Hacker | AI Explorer based in Pakistan. I build secure, efficient systems that blend low-level fundamentals with modern application development."
-              delay={150}
-              animateBy="words"
-              direction="top"
-              className=" mb-6"
-            />
+            <div className="mb-5">
+              <p className="text-lg font-medium text-zinc-200 mb-2">Computer Science Student</p>
+              <p className="text-sm text-zinc-400 mb-4">📍 Based in <span className="text-cyan-400">Pakistan</span></p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Ethical Hacker",
+                  "AI Enthusiast",
+                  "Java Developer",
+                  "Python Developer",
+                  "C++ Programmer",
+                  "Networking Learner",
+                  "DSA Problem Solver",
+                ].map((role) => (
+                  <span
+                    key={role}
+                    className="rounded-full border border-cyan-400/70 bg-zinc-900/80 px-4 py-2 text-sm font-medium text-zinc-100 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
+                  >
+                    {role}
+                  </span>
+                ))}
+              </div>
+            </div>
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
                 href="/CV_PDF.pdf" 
@@ -173,13 +187,19 @@ function App() {
                   About Me
                 </h2>
 
-                <BlurText
-                  text="I’m Majid Ali, a Computer Science student and ethical hacker with a passion for building intelligent systems, solving complex problems, and exploring the intersection of software engineering and cybersecurity. My work blends low-level computer fundamentals with high-level application development to deliver solutions that are both efficient and secure. I enjoy hands-on projects in AI/ML, backend systems, and desktop applications, always learning new technologies and applying them in real-world scenarios."
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
-                />
+                <p className="text-base md:text-lg leading-relaxed mb-10 text-gray-300 whitespace-pre-line">
+                  {`I am a passionate Computer Science student with a 
+strong interest in Software Development, Ethical Hacking, 
+Artificial Intelligence, Networking, and Problem Solving.
+
+I enjoy building real-world projects, learning modern 
+technologies, and exploring cybersecurity concepts to 
+continuously sharpen my programming skills.
+
+My goal is to become a highly skilled Software Engineer 
+and Cybersecurity Professional, contributing to impactful 
+solutions that make a difference in the digital world.`}
+                </p>
 
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
