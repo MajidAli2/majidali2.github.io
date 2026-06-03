@@ -1,13 +1,13 @@
-const DEFAULT_SITE_URL = "https://majidalichanna.vercel.app";
+const DEFAULT_SITE_URL = "https://majidali2.github.io";
 const DEFAULT_GITHUB_URL = "https://github.com/MajidAli2";
 const DEFAULT_LINKEDIN_URL = "https://www.linkedin.com/in/majid-ali-28755738a";
 
-const siteUrl = (import.meta.env.VITE_SITE_URL || DEFAULT_SITE_URL).replace(/\/$/, "");
+const runtimeSiteUrl = typeof window !== "undefined" ? window.location.origin : "";
+const siteUrl = (import.meta.env.VITE_SITE_URL || runtimeSiteUrl || DEFAULT_SITE_URL).replace(/\/$/, "");
 const githubUrl = (import.meta.env.VITE_GITHUB_URL || DEFAULT_GITHUB_URL).replace(/\/$/, "");
 const linkedinUrl = (import.meta.env.VITE_LINKEDIN_URL || DEFAULT_LINKEDIN_URL).replace(/\/$/, "");
 const instagramUrl = (import.meta.env.VITE_INSTAGRAM_URL || "").replace(/\/$/, "");
 const profileImage = `${siteUrl}/New%20folder/majid.jpeg`;
-const isGitHubPages = typeof window !== "undefined" && window.location.hostname.endsWith("github.io");
 
 const metaDefinitions = [
   ["description", "Majid Ali's portfolio with projects, skills, resume, GitHub, LinkedIn, and contact details for software, AI, cybersecurity, and development work."],
@@ -83,7 +83,7 @@ function upsertStructuredData() {
 export function setupSeo() {
   document.title = "Majid Ali | Portfolio, Projects, GitHub, LinkedIn";
   upsertMeta("description", metaDefinitions[0][1]);
-  upsertMeta("robots", isGitHubPages ? "noindex, nofollow" : metaDefinitions[1][1]);
+  upsertMeta("robots", metaDefinitions[1][1]);
   upsertMeta("author", metaDefinitions[2][1]);
   upsertMeta("theme-color", metaDefinitions[3][1]);
 

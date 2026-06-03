@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://majidalichanna.vercel.app/sitemap.xml
+Sitemap: https://majidali2.github.io/sitemap.xml
